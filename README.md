@@ -15,12 +15,22 @@
 
     <img src="_imagens/glass-oculos-preto-peq.png"/>
 
-    <p>Menu Principal
-    - Home
-    - Especificações
-    - Fotos
-    - Multimídia
-        - Fale conosco</p>
+    <nav>
+        <h1>1Menu Principal</h1>
+    <ul type="disc">
+        <li>Home</li>
+        <li>Especificações</li>
+        <li>Fotos</li>
+        <li>Multimídia</li>
+        <ul>
+            <li>Musicas</li>
+            <li>Videos</li>
+        </ul>
+
+        <li>Fale conosco</li>
+    </ul>
+    </nav>
+
     </header>
     <hgroup>
         <h3>Tecnologia > Inovações</h3>
