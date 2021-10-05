@@ -38,7 +38,7 @@
                     <h3 class="direita">Atualizado em 04/outubro/2021</h3>
                 </hgroup>
             </header>
-            <form>
+            <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com">
                 <fieldset id="usuario"><legend>Identificação do Usuário</legend>
                     <p><label for="cNome"> Nome:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
                     <p><label for="cSenha"> Senha:</label><input type="password" name="tSenha" id="cSenha" size="6" maxlength="8" placeholder="8 Dígitos"/></p>
@@ -51,16 +51,42 @@
                 </fieldset>
 
                 <fieldset id="endereco"><legend>Endereço do Usuário</legend>
-                    <p>Logradouro: <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua/Av/Trav"/></p>
-                    <p>Número: <input type="number" name="tNum" id="cNum" min="0" max="99999"/></p>
-                    Estado:
-                    Cidade:
+                    <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua/Av/Trav"/></p>
+                    <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0" max="99999"/></p>
+                    <p><label for="cEst">Estado:</label> <select name="tEst" id="cEst">
+                        <optgroup label="Região Suldeste">
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="SP" selected>São Paulo</option>
+                            <option value="ES">Espírito Santo</option>
+                        </optgroup>
+                        <optgroup label="Região Sul">
+                            <option value="PR">Parana</option>
+                            <option value="SC">Santa CAtarina</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                        </optgroup>
+                    </select></p>
+                    <p><label for="cCid">Cidade:</label>
+                        <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"/></p>
+                        <datalist id="cidades">
+                            <option value="Rio de Janeiro"></option>
+                            <option value="Niterói"></option>
+                            <option value="Resende"></option>
+                            <option value="Atibaia"></option>
+                            <option value="Bragança Ptª"></option>
+                            <option value="São Paulo"></option>
+                            <option value="Extrema"></option>
+                            <option value="Pedralva"></option>
+                        </datalist>
+
+
                 </fieldset>
                 
-                <fieldset>
-                    <legend id="mensagem">Mensagem do Usuário</legend>
-                    Grau de Urgência:
-                    Mensagem:
+                <fieldset> id="mensagem"<legend>Mensagem do Usuário</legend>
+                    <p><label for="cUrg">Grau de Urgência:</label>
+                    Min.<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Máx.</p>
+                    <p><label for="cMsg">Mensagem:</label>
+                    <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua Mensagem!!"></textarea></p>
                 </fieldset>
                 
                 <fieldset>
